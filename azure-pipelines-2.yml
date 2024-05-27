@@ -1,12 +1,5 @@
 
-stages:
-- stage: Verify
-  jobs:
-  - job: myJob
-    pool: 
-     vmImage: 'ubuntu-latest'
-    steps:
-    - bash: echo "Hello world"
+jobs:
   - job: verify
     pool: server
     steps:
