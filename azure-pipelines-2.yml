@@ -1,7 +1,14 @@
 jobs:
 - job: myJob
   timeoutInMinutes: 10
-  pool:
-    vmImage: 'ubuntu-latest'
+  pool: server
   steps:
-  - bash: echo "Hello world"
+  - task: ContrastIntegration@2
+    inputs:
+      ContrastService: 'TestContrastConnection'
+      Application: '30b2ba47-70a0-4718-8f25-ac6641695ce9'
+      CriticalLimit: '0'
+      HighLimit: '0'
+      MediumLimit: '0'
+      LowLimit: '0'
+      NoteLimit: '0'
